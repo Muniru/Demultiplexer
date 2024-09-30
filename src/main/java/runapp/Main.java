@@ -1,9 +1,8 @@
 package runapp;
 
+import picocli.CommandLine;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("hello world");
-        App app = new App();
-        app.Start(args);
+        int exitCode = new CommandLine(new StartApp()).execute(args);
     }
 }

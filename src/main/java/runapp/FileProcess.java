@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FileProces {
+public class FileProcess {
 
     public void processFiles(String csvFile, String fastqFile, String outputFile, int maxMismatches) {
         // Load barcode mapping from CSV file
