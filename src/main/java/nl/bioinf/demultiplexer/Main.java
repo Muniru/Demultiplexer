@@ -1,4 +1,4 @@
-package runapp;
+package nl.bioinf.demultiplexer;
 
 public class Main {
     public static void main(String[] args) {

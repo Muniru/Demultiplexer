@@ -1,4 +1,4 @@
-package runapp;
+package nl.bioinf.demultiplexer;
 
 import java.io.BufferedReader;
 import java.io.FileReader;  // This will now refer to java.io.FileReader

@@ -1,3 +1,5 @@
+package nl.bioinf.demultiplexer;
+
 import org.biojava.nbio.core.sequence.DNASequence;
 import org.biojava.nbio.core.exceptions.CompoundNotFoundException;
 
