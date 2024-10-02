@@ -1,9 +1,8 @@
 package runapp;
 
-public class ParamChecker {
+public class FileWriter {
 
-    public static void check(String[] args){
+    public void write(){
         throw new UnsupportedOperationException("Not supported yet.");
     }
-
 }

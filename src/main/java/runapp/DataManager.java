@@ -1,14 +1,12 @@
 package runapp;
 
 import javax.xml.crypto.Data;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class DataManager {
 
     private static DataManager instance;
-    private Map<String, List> sampleReads = new HashMap<>();
+    private List<ReadData> sampleReads = new LinkedList<>(); // Data Type nog te veranderen.
 
     private DataManager() {
     }
@@ -21,7 +19,7 @@ public class DataManager {
         return instance;
     }
 
-    public void ProcessRead(String barcode, String readData){
+    public void processRead(String barcode, String readData){
         throw new UnsupportedOperationException("Not supported yet.");
 //        Code
 //        if barcode not in sampleReads:

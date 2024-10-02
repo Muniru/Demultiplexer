@@ -1,5 +1,8 @@
 package runapp;
 
+import jdk.jshell.spi.ExecutionControl;
+
+import javax.naming.OperationNotSupportedException;
 import java.io.BufferedReader;
 import java.io.FileReader;  // This will now refer to java.io.FileReader
 import java.io.FileWriter;
@@ -9,6 +12,9 @@ import java.util.Map;
 
 public class MyFileReader {
 
+    public void readFile (String fileName) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
     public void processFiles(String hdf5File, String csvFile, String outputFile) {
         Map<String, String> barcodeToSampleMap = loadBarcodeMapping(csvFile);
         // Assuming we have a method to read HDF5 files
