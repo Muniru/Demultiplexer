@@ -11,11 +11,12 @@ public class App {
         fileReader.processFiles("","","");
 
         // Remove nanopore barcodes if still present from both sides
-        DataManipulator dataManipulator = new DataManipulator();
-        dataManipulator.removeNanoporeBarcodes(DataManager.getInstance());
+        BarcodeRemover barcodeRemover = new BarcodeRemover();
+        barcodeRemover.removeNanoporeBarcodes(null);
 
         // Het identificeren van illumina barcodes en die weer afschrijven naar maps
-        dataManipulator.parseIllumina(DataManager.getInstance());
+        SeqeunceComparator dataManipulator = new SeqeunceComparator();
+        dataManipulator.parseIllumina(null);
 
         // output
         FileWriter output = new FileWriter();
