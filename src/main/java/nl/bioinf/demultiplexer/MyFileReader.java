@@ -1,4 +1,4 @@
-package runapp;
+package nl.bioinf.demultiplexer;
 
 import jdk.jshell.spi.ExecutionControl;
 

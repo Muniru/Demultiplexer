@@ -1,5 +1,8 @@
-package runapp;
+package nl.bioinf.demultiplexer;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import javax.xml.crypto.Data;
 import java.util.*;
 
