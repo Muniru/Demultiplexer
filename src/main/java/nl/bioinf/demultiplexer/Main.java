@@ -1,4 +1,4 @@
-package runapp;
+package nl.bioinf.demultiplexer;
 
 import picocli.CommandLine;
 public class Main {

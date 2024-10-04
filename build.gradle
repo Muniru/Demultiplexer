@@ -13,6 +13,10 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.biojava/biojava-core
+    implementation group: 'org.biojava', name: 'biojava-core', version: '7.1.0'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
     implementation platform('org.junit:junit-bom:5.10.0') // Add this block
 
     testImplementation 'org.junit.jupiter:junit-jupiter'
