@@ -16,7 +16,6 @@ public class StartApp implements Runnable {
     @Parameters(index = "1", arity = "0..1", description = "The path to the CSV file mapping barcodes to samples.")
     private File csvFile = new File("/homes/sschoonen/Java_eindopdracht/Demultiplexer/samples/default.csv");
 
-
     @Parameters(index = "2", arity = "0..1", description = "The output file path.")
     private File outputFile = new File("/homes/sschoonen/Java_eindopdracht/Demultiplexer/samples/output.txt"); // Default output file path
 
