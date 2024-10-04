@@ -1,19 +1,20 @@
 package nl.bioinf.demultiplexer;
 
-import java.io.File;
-import java.io.FileReader;
-import java.nio.file.Path;
-import java.security.PublicKey;
-import java.util.Arrays;
+
+import java.util.List;
 
 public class SequenceBatchThread implements Runnable {
 
-    public SequenceBatchThread(int maxError) {
+    private List<char[][]> fastqReadList;
+    private int maxError;
 
+    public SequenceBatchThread(List<char[][]> fastqReadsList, int maxError) {
+        this.fastqReadList = fastqReadsList;
+        this.maxError = maxError;
     }
 
     @Override
     public void run() {
-
+        System.out.println("Starting sequence batch thread");
     }
 }

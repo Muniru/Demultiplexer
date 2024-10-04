@@ -6,12 +6,14 @@ public class ParamChecker {
     private File fastqFile;
     private File outputFile;
     private int maxMismatches;
+    private int threads;
 
-    public ParamChecker(File csvFile, File fastqFile, File outputFile, int maxMismatches) {
+    public ParamChecker(File csvFile, File fastqFile, File outputFile, int maxMismatches, int threads) {
         this.csvFile = csvFile;
         this.fastqFile = fastqFile;
         this.outputFile = outputFile;
         this.maxMismatches = maxMismatches;
+        this.threads = (threads==0) ? Runtime.getRuntime().availableProcessors() : threads;
     }
 
     public void processFiles() {

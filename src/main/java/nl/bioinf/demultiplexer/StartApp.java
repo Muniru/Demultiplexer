@@ -1,7 +1,9 @@
 package nl.bioinf.demultiplexer;
 
+import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Parameters;
+import picocli.CommandLine.Option;
 
 import java.io.File;
 
@@ -26,11 +28,14 @@ public class StartApp implements Runnable {
     @Parameters(index = "4", arity = "0..1", description = "The max mismatch.")
     private int maxMismatches = 1;
 
+    @Option(names = {"-t", "--threads"}, description = "Max treads used")
+    private int threads;
+
     @Override
     public void run() {
         FileProcess fileReader = new FileProcess();
         // Call processFiles on the instance of MyFileReader
-        ParamChecker paramChecker = new ParamChecker(csvFile, fastqFile, outputFile, maxMismatches);
+        ParamChecker paramChecker = new ParamChecker(csvFile, fastqFile, outputFile, maxMismatches, threads);
         // fileReader.processFiles(csvFile, fastqFile, outputFile, maxMismatches);
     }
 }
