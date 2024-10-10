@@ -8,7 +8,7 @@ import java.util.Map;
 
 class FastqWriterTest {
 
-    private static Map<String, List<FastQRead>> reads(){
+    public static Map<String, List<FastQRead>> reads(){
         Map<String, List<FastQRead>> reads = new HashMap<>();
         reads.put("0", FastQReadTest.fastQReads());
         reads.put("1", FastQReadTest.fastQReads());

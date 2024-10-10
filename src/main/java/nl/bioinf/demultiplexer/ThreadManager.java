@@ -7,11 +7,12 @@ public class ThreadManager {
 
     private List<Thread> threads = new ArrayList<>();
     private int maxThreads;
+    private int currentThread;
     public ThreadManager(int maxThreads) {
         this.maxThreads = maxThreads;
     }
 
-    public synchronized void createThread(List<FastQRead> fastqReadList, int maxError){
+    public synchronized void createThread(List<FastQRead> fastqReadList, int maxError, String outputDirectory){
 
         // Wait until if the max threads is reached
         while (threads.size() >= maxThreads) {
@@ -22,7 +23,7 @@ public class ThreadManager {
             }
         }
 
-        Runnable runnable = new SequenceBatchThread(fastqReadList, maxError) {
+        Runnable runnable = new SequenceBatchThread(currentThread++, maxError,outputDirectory, fastqReadList) {
             @Override
             public void run() {
                 try {
@@ -36,6 +37,7 @@ public class ThreadManager {
         Thread thread = new Thread(runnable);
         threads.add(thread);
         thread.start();
+
     }
 
 

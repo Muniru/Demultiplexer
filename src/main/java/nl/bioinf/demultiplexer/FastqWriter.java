@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class FastqWriter {
 
-    public void write(Map<String, List<FastQRead>> data, String outputDir, String subDirName) {
+    public static void write(Map<String, List<FastQRead>> data, String outputDir, String subDirName) {
         // Maak directory op basis
         String dir = createDir(outputDir, subDirName);
 
@@ -21,7 +21,6 @@ public class FastqWriter {
             writeFastq(filePath, entry.getValue());
         }
     }
-
 
     private static void writeFastq(String filePath, List<FastQRead> reads) {
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
@@ -35,7 +34,7 @@ public class FastqWriter {
         }
     }
 
-    private String createDir (String outputDir, String dirName ) {
+    private static String createDir (String outputDir, String dirName ) {
         Path dirPath = Paths.get(outputDir, dirName);
         try {
             Files.createDirectories(dirPath);
