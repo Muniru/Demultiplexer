@@ -1,14 +1,10 @@
 package nl.bioinf.demultiplexer;
 
 import org.junit.jupiter.api.Test;
-
-import java.io.File;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class FastqWriterTest {
 
