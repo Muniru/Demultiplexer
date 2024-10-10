@@ -3,6 +3,7 @@ package nl.bioinf.demultiplexer;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +24,8 @@ class FastqWriterTest {
     @Test
     void testWrite() {
         FastqWriter fastqWriter = new FastqWriter();
-        //fastqWriter.write(reads(),"");
+        String outputDir = Paths.get("src","test","output").toAbsolutePath().toString();
+        fastqWriter.write(reads(),outputDir, "1");
+        System.out.println(outputDir);
     }
 }

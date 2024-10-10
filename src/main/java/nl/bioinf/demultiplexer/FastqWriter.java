@@ -9,9 +9,9 @@ import java.util.Map;
 
 public class FastqWriter {
 
-    public void write(Map<String, List<FastQRead>> data, String outputDir, String dirName) {
+    public void write(Map<String, List<FastQRead>> data, String outputDir, String subDirName) {
         // Maak directory op basis
-        String dir = createDir(outputDir, dirName);
+        String dir = createDir(outputDir, subDirName);
 
         // Maak een file voor elke key en in elke key de data ervan
         for (Map.Entry<String, List<FastQRead>> entry : data.entrySet()) {
