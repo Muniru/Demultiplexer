@@ -9,7 +9,9 @@ public class ThreadManager {
     private int maxThreads;
     private int currentThread;
     public ThreadManager(int maxThreads) {
-        this.maxThreads = maxThreads;
+        // If invalid threads grab maximum availeble
+        this.maxThreads = (maxThreads > 0) ? maxThreads : Runtime.getRuntime().availableProcessors();
+        System.out.print(this.maxThreads + " threads available");
     }
 
     public synchronized void createThread(List<FastQRead> fastqReadList, int maxError, String outputDirectory){
@@ -37,7 +39,6 @@ public class ThreadManager {
         Thread thread = new Thread(runnable);
         threads.add(thread);
         thread.start();
-
     }
 
 
