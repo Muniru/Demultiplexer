@@ -18,15 +18,10 @@ public class SequenceBatchThread implements Runnable {
         this.maxError = maxError;
         this.threadId = threadId;
         this.outputDirectory = outputDirectory;
-    }
+}
 
     @Override
     public void run() {
-        System.out.println("Starting sequence batch thread");
-        for (int i = 0; i < 1000; i++) {
-            System.out.println(i);
-        }
-
         Map<String, List<FastQRead>> samplesMap = new HashMap<>();
 
         // outs checken
