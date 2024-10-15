@@ -21,8 +21,14 @@ public class SequenceBatchThread implements Runnable {
 
     @Override
     public void run() {
+        SampleDataSingleton instance = SampleDataSingleton.getInstance();
+        Map<String, SampleIndexes> indexesMap = instance.getSampleIndexes();
         Map<String, List<FastQRead>> samplesMap = new HashMap<>();
 
+        System.out.println(fastqReadList.size());
+        for (FastQRead fastqRead : fastqReadList) {
+            System.out.println(fastqRead);
+        }
         // outs checken
 
         // barcode checken
