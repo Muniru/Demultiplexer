@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: runapp.Main
+Main-Class: nl.bioinf.demultiplexer.Main
 
