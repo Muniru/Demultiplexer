@@ -39,7 +39,7 @@ jar {
     duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
     manifest {
         attributes(
-                'Main-Class': 'runapp.Main'
+                'Main-Class': 'nl.bioinf.demultiplexer.Main'
         )
     }
     from {
