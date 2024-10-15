@@ -11,13 +11,13 @@ git clone git@github.com:Muniru/Demultiplexer.git
 
 ### Parameters
 
-| Parameter         | Type       | Description                                                                         | Required | Default Value     |
-|-------------------|------------|-------------------------------------------------------------------------------------|----------|-------------------|
-| `-f`, `--fastq`   | `.fastq`   | Fastq file to be multiplexed                                                        | Yes      | N/A               |
-| `-i`, `--indexes` | `.csv`     | Comma seperated file including the sequencing barcodes and indices for all samples. | Yes      | N/A               |
-| `-e`, `--error`   | `Inrerger` | Maximum allowed mismatches.                                                         | Yes      | N/A               |
-| `-o`, `--output`  | `Path`     | Output directory.                                                                   | Yes      | N/A               |
-| `-t`, `--thread`  | `Interger` | Number of threads used.                                                             | No       | Maximum threads   |
+| Parameter           | Type       | Description                                                                         | Required | Default Value     |
+|---------------------|------------|-------------------------------------------------------------------------------------|----------|-------------------|
+| `[<csvFile>]`       | `.csv`     | Comma seperated file including the sequencing barcodes and indices for all samples. | Yes      | N/A               |
+| ` [<outputFile>]`   | `Path`     | Output directory.                                                                   | Yes      | N/A               |
+| `[<fastqFile>]`     | `.fastq`   | Fastq file to be multiplexed                                                        | Yes      | N/A               |
+| `[<maxMismatches>]` | `Interger` | Maximum allowed mismatches.                                                         | Yes      | N/A               |
+| `-t`, `--thread`    | `Interger` | Number of threads used.                                                             | No       | Maximum threads   |
 
 
 ### Bash
